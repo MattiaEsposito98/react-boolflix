@@ -21,7 +21,7 @@ export default function Index() {
       <ul>
         {movies.map((movie, i) => (
           <li key={i}>
-            {`titolo: ${movie.title}`}
+            {movie.title === undefined ? `titolo: ${movie.title}` : movie.name}
             <div>
               {`titolo originale:${movie.original_title}`}
             </div>
