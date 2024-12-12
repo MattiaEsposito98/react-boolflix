@@ -31,3 +31,24 @@ Header {
   width: 30px;
   height: 30px;
 }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.row>* {
+  padding: 0 10px;
+}
+
+.col {
+  width: calc(100% / 4);
+}
