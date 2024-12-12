@@ -39,6 +39,26 @@ Header {
 .form-header {
   display: flex;
   gap: 1rem;
+  color: rgb(190, 75, 75);
+  align-items: center;
+  height: 30px;
+
+  button {
+    padding: 5px 20px;
+    background-color: rgb(230, 84, 84);
+    cursor: pointer;
+  }
+
+  input {
+    background-color: rgb(245, 150, 150);
+    color: black;
+    height: 30px;
+  }
+
+  input::placeholder {
+    color: black;
+    font-style: italic;
+  }
 }
 
 .img-flag {

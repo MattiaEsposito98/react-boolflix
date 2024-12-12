@@ -78,13 +78,17 @@ export default function Index() {
               ) : movie.original_language === "ja" ? (
                 <img className="img-flag"
                   src="https://media.istockphoto.com/id/983149640/it/foto/bandiera-del-giappone-che-sventola-sfondo.jpg?s=612x612&w=is&k=20&c=61hgh329sOoQTLfif42jf2LpCprVeq9Uu0WFtFUc65U=" />
+              ) : movie.original_language === "fr" ? (
+                <img className="img-flag"
+                  src="https://media.istockphoto.com/id/510973709/it/foto/primo-piano-della-bandiera-della-francia.jpg?s=612x612&w=is&k=20&c=q9EjOk8Jg4mIX-0HhXn4kzRRwzzi2BLpg5dhnRK9AgY=" />
               ) : (
                 <p>Lingua originale: {movie.original_language}</p>
               )}
 
+
               original_title={movie.title || movie.name}
 
-              vote={`Voto: ${movie.vote_average}`}
+              vote={movie.vote_average}
             />
 
           </li>

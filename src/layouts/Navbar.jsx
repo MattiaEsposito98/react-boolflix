@@ -21,7 +21,7 @@ export default function Navbar() {
         <input type="text"
           id="search"
           name="search"
-          placeholder="titolo"
+          placeholder="    titolo..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
