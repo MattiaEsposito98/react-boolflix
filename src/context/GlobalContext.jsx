@@ -17,6 +17,7 @@ export const GlobalProvider = ({ children }) => {
       })
       .catch(err => {
         console.error("Errore durante il fetch del film", err)
+        { <p>Nessun film trovato</p> }
       })
   }
 

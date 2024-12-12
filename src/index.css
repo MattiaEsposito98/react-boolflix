@@ -22,3 +22,8 @@ Header {
   display: flex;
   gap: 1rem;
 }
+
+.img-flag {
+  width: 30px;
+  height: 30px;
+}

@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header >
       <div>
-        Logo
+        BOOLFIX
       </div>
       <Navbar />
     </header>
