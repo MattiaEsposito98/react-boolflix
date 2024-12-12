@@ -12,7 +12,7 @@ export const GlobalProvider = ({ children }) => {
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=3568031daf2b81e88ef38510b7355833&query=${encodeURIComponent(query)}`)
     axios.get(`https://api.themoviedb.org/3/search/tv?api_key=3568031daf2b81e88ef38510b7355833&query=${encodeURIComponent(query)}`) // è una funzione JavaScript che codifica una stringa per essere utilizzata in un URL covertendo gli spazi e caratteri speciali
       .then(res => {
-        setMovies(res.data.results)
+        setMovies([...res.data.results]) //spread per sommare i risultati
         console.log('Risultati dell\'API:', res.data.results)
       })
       .catch(err => {
