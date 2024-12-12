@@ -1,9 +1,14 @@
 import Navbar from "./Navbar"
 
 export default function Header() {
+  function Home() {
+    location.reload()
+  }
+
+
   return (
     <header >
-      <div>
+      <div className="logo" onClick={Home}>
         BOOLFIX
       </div>
       <Navbar />

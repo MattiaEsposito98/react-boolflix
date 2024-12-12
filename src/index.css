@@ -18,6 +18,10 @@ Header {
   padding: 5rem;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .form-header {
   display: flex;
   gap: 1rem;

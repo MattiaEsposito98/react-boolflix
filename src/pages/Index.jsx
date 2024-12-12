@@ -33,7 +33,7 @@ export default function Index() {
                 <img className="img-flag"
                   src="https://media.istockphoto.com/id/499811047/it/foto/bandiera-dellitalia.jpg?s=612x612&w=is&k=20&c=OnFREVw0Lz9DCUK_ZT1TT98Gae9XgeusBqcMIo_Q0XI=" />
               ) : (
-                <p>Titolo originale: {movie.original_language}</p>
+                <p>Lingua originale: {movie.original_language}</p>
               )}
             </div>
             <div>
