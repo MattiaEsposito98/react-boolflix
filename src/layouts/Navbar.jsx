@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <form className="form-header" onSubmit={handleSearch} required action=" ">
+      <form className="form-header" onSubmit={handleSearch} action=" ">
         <label htmlFor="search">Ricerca film o serie TV</label>
         <input type="text"
           id="search"

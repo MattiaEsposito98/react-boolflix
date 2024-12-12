@@ -5,6 +5,7 @@ const GlobalContext = createContext()
 
 export const GlobalProvider = ({ children }) => {
   const [movies, setMovies] = useState([])
+  const [query, setQuery] = useState('')
 
   const fetchFilms = (query) => {
     console.log('FetchFilms chiamato con query:', query);
@@ -20,7 +21,7 @@ export const GlobalProvider = ({ children }) => {
   }
 
   return (
-    <GlobalContext.Provider value={{ movies, setMovies, fetchFilms }}>
+    <GlobalContext.Provider value={{ query, setQuery, movies, setMovies, fetchFilms, }}>
       {children}
     </GlobalContext.Provider>
   )
