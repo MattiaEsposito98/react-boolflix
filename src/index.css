@@ -18,6 +18,10 @@ ol {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+img {
+  height: 100%;
+
+}
 
 /*  */
 Header {

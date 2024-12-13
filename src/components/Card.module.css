@@ -1,6 +1,6 @@
 .card {
   border: 1px solid black;
-  min-height: 220px;
+  min-height: 375px;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
@@ -11,6 +11,7 @@
   height: 100%;
   display: block;
   transition: opacity 0.3s ease;
+  object-fit: cover;
 }
 
 .card:hover .imageBackground {

@@ -31,17 +31,17 @@ export const GlobalProvider = ({ children }) => {
         })
         setSeries(mappedSeries)
       }).catch(err => {
-        console.error(err)
+        console.error("Errore durante il fetch della serie", err)
       })
   }
 
+  const totalResults = [...movies, ...series] //somma degli array
+
   return (
-    <GlobalContext.Provider value={{ query, setQuery, movies, setMovies, fetchData, }}>
+    <GlobalContext.Provider value={{ query, setQuery, movies, setMovies, fetchData, totalResults }}>
       {children}
     </GlobalContext.Provider>
   )
 }
 
 export default GlobalContext
-
-

@@ -3,7 +3,7 @@ import GlobalContext from "../context/GlobalContext"
 import Card from "../components/Card"
 
 export default function Index() {
-  const { movies, setMovies, fetchData, query } = useContext(GlobalContext)
+  const { movies, setMovies, fetchData, query, totalResults } = useContext(GlobalContext)
 
 
   useEffect(() => {
@@ -15,11 +15,11 @@ export default function Index() {
   return (
     <main className="container">
       <ul className="row">
-        {movies.map((movie) => (
+        {totalResults.map((movie) => (
           <li className="col" key={movie.id}>
             <Card
               image={movie.poster_path ? `https://image.tmdb.org/t/p/w342/${movie.poster_path}` : `https://media.istockphoto.com/id/2158077202/it/foto/close-up-of-a-glossy-red-button-featuring-a-prominent-white-cross-symbolizing-error-or.jpg?s=2048x2048&w=is&k=20&c=_CE8W6l5Iwe1mHXKK_wJnrmrH7ECvHGTzEVwcRbksaI=`}
-              title={movie.title || movie.name}
+              title={movie.title}
 
               original_language={movie.original_language === "en" ? (
                 <img className="img-flag"
