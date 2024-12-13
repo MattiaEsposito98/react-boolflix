@@ -18,6 +18,7 @@ export default function Index() {
         {movies.map((movie) => (
           <li className="col" key={movie.id}>
             <Card
+              image={movie.poster_path ? `https://image.tmdb.org/t/p/w342/${movie.poster_path}` : `https://media.istockphoto.com/id/2158077202/it/foto/close-up-of-a-glossy-red-button-featuring-a-prominent-white-cross-symbolizing-error-or.jpg?s=2048x2048&w=is&k=20&c=_CE8W6l5Iwe1mHXKK_wJnrmrH7ECvHGTzEVwcRbksaI=`}
               title={movie.title || movie.name}
 
               original_language={movie.original_language === "en" ? (
@@ -36,9 +37,7 @@ export default function Index() {
                 <p>Lingua originale: {movie.original_language}</p>
               )}
 
-
               original_title={movie.original_title}
-
               vote={movie.vote_average}
             />
 
