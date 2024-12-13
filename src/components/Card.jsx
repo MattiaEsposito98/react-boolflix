@@ -4,12 +4,10 @@ import style from "./Card.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-export default function Card({ title, original_title, original_language, image, vote }) {
+export default function Card({ title, original_title, original_name, original_language, image, vote, name }) {
   const { fetchFilms } = useContext(GlobalContext)
   const star = Math.round(vote / 2)
-  console.log(star)
   let arrayStar = []
-  console.log("array", arrayStar)
 
   for (let i = 0; i < star; i++) {
     arrayStar.push(<FontAwesomeIcon icon={faStar} style={{ color: "gold" }} />)
@@ -17,14 +15,21 @@ export default function Card({ title, original_title, original_language, image, 
 
 
   return (
-    <div className={style.card}>
+    <div >
       {/* <img src={`https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png`} alt="" /> */}
-      <p>{title}</p>
-      <p>{original_language}</p>
-      <p>{original_title}</p>
-      <div>
-        {arrayStar}
+      <div className={style.card}>
+        <h3>{title}</h3>
+        <div>
+          <p>{original_language}</p>
+        </div>
+        <div>
+          <p>{original_title}</p>
+        </div>
+        <div>
+          {arrayStar}
+        </div>
       </div>
+
 
 
     </div>
